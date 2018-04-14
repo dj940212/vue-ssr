@@ -32,7 +32,14 @@ if (isDev) {
 					test: /\.styl/,
 					use: [
 						'vue-style-loader', //热加载需要
-						'css-loader', {
+						{
+							loader: 'css-loader',
+							options: {
+								module: true,
+								localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]' 
+							}
+						},
+						{
 							loader: 'postcss-loader',
 							options: {
 								sourceMap: true
