@@ -34,10 +34,10 @@ if (isDev) {
 						'vue-style-loader', //热加载需要
 						{
 							loader: 'css-loader',
-							options: {
-								module: true,
-								localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]' 
-							}
+							// options: {
+							// 	module: true,
+							// 	localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]'
+							// }
 						},
 						{
 							loader: 'postcss-loader',
